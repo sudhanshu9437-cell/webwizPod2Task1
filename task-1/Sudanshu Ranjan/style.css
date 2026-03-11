@@ -1,0 +1,136 @@
+body {
+    background-image:url(https://img.freepik.com/free-vector/comic-inspired-paper-cloud-wallpaper-with-text-space_1017-60643.jpg?semt=ais_hybrid&w=740&q=80);
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 90vh;
+    background-position: top;
+    margin: 0;
+    padding: 0;
+}
+#heading{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 50px;
+}
+#choices{
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 40px 0;
+}
+#message{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    margin: 10px 0;
+}
+#result{
+    text-align: center;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 10px 0;
+}
+img{
+    width: 220px;
+    height: 220px;
+    margin: 20px;
+    cursor: pointer;
+    border: 8px solid;
+    border-image: linear-gradient(45deg, red, orange, green, blue, indigo) 1;
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.3);
+    animation: borderAnimation 5s linear infinite;
+}
+img:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+img:active{
+    transform: scale(0.90);
+    transition: transform 0.1s;
+}
+#scores{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#new-game{
+    display: block;
+    margin:  30px auto;
+    padding: 10px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    background: rgb(25, 131, 25);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+button:hover{
+    opacity:80%;
+}
+button:active{
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+@media (max-width: 600px){
+    #heading{
+      font-size: 30px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding: 10px 0;
+      margin: 0;
+    }
+    img{
+        width: 120px;
+        height: 120px;
+        border: 5px solid;
+    }
+    #choices{
+        gap: 0px;
+        margin: 20px 0;
+    }
+    #new-game{
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 10px auto 10px auto;
+    }
+    body{
+        background-size: cover;
+        height: 100vh;
+    }
+    #result{
+        font-size: 18px;
+        padding: 10px;
+    }
+    #message{
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+@keyframes borderAnimation {
+    0% {
+        border-image: linear-gradient(45deg, red, orange, green, blue, indigo) 1;
+    }
+    20% {
+        border-image: linear-gradient(45deg, orange, green, blue, indigo, red) 1;
+    }
+    40% {
+        border-image: linear-gradient(45deg, green, blue, indigo, red, orange) 1;
+    }
+    60% {
+        border-image: linear-gradient(45deg, blue, indigo, red, orange, green) 1;
+    }
+    80% {
+        border-image: linear-gradient(45deg, indigo, red, orange, green, blue) 1;
+    }
+    100% {
+        border-image: linear-gradient(45deg, red, orange, green, blue, indigo) 1;
+    }
+}
